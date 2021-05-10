@@ -80,6 +80,12 @@ app.post("/create/user", (req, res) => {
     // res.json({ name, age })
 });
 
+//pulse check
+app.get("/first-user", (req, res) => {
+    res.status(200)
+    res.json(users[0])
+})
+
 app.listen(port, () => {
     console.log(`Example app listening at http://localhost:${port}`);
 });

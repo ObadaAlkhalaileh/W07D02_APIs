@@ -1,23 +1,25 @@
 {
-  "name": "W07D02_APIs",
-  "version": "1.0.0",
-  "description": "",
-  "main": "C22_Obada.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ObadaAlkhalaileh/W07D02_APIs.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/ObadaAlkhalaileh/W07D02_APIs/issues"
-  },
-  "homepage": "https://github.com/ObadaAlkhalaileh/W07D02_APIs#readme",
-  "dependencies": {
-    "express": "^4.17.1"
-  }
+    "name": "W07D02_APIs",
+    "version": "1.0.0",
+    "description": "",
+    "main": "C22_Obada.js",
+    "scripts": {
+        "dev": "nodemon C22_Obada.js",
+        "start": "node C22_Obada.js",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/ObadaAlkhalaileh/W07D02_APIs.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/ObadaAlkhalaileh/W07D02_APIs/issues"
+    },
+    "homepage": "https://github.com/ObadaAlkhalaileh/W07D02_APIs#readme",
+    "dependencies": {
+        "express": "^4.17.1"
+    }
 }
