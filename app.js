@@ -46,7 +46,7 @@ app.put("/update/todo/:name", (req, res) => {
         return elem.todo === name
     })
 
-    if (name) {
+    if (found) {
         found = { todo: req.body.todo, isCompleted: req.body.isCompleted }
         todos.splice(i1, 1, found)
 
@@ -80,6 +80,40 @@ app.delete("/delete/todo/:name", (req, res) => {
 })
 
 //Q7
+app.put("/complete/todo/:name", (req, res) => {
+    const name = req.params.name
+
+    let i1 = 0
+    const found = todos.find((elem, i) => {
+        i1 = i
+        return elem.todo === name
+    })
+
+    if (found) {
+        todos[i1].isCompleted = true
+
+        res.status(200)
+        res.json(todos)
+    } else {
+        res.status(404);
+        res.json("Todo not found");
+    }
+})
+
+//Q8
+app.get("/completed/todos", (req, res) => {
+
+    const completedList = todos.filter((elem, i) => {
+        return elem.isCompleted === true
+    })
+    if (completedList) {
+        res.status(200)
+        res.json(completedList)
+    } else {
+        res.status(404);
+        res.json("no completed todos");
+    }
+})
 
 app.listen(port, () => {
     console.log(`Example app listening at http://localhost:${port}`);
